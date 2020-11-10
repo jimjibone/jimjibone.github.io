@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>University on James Reuss</title>
+    <link>https://jamesreuss.co.uk/categories/university/</link>
+    <description>Recent content in University on James Reuss</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 01 Jul 2013 12:21:27 +0000</lastBuildDate>
+    <atom:link href="https://jamesreuss.co.uk/categories/university/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Object Detection for an Eye-Tracking Robotic Arm</title>
+      <link>https://jamesreuss.co.uk/project/robotarm/</link>
+      <pubDate>Mon, 01 Jul 2013 12:21:27 +0000</pubDate>
+      
+      <guid>https://jamesreuss.co.uk/project/robotarm/</guid>
+      <description>&lt;p&gt;For my 4th year engineering project at university, I worked with a group of engineers to create a semi-autonomous robotic arm system which accepted user input via an eye-tracker.&lt;/p&gt;
+
+&lt;p&gt;My task in this project was to develop the object detection system to help guide the arm around the workspace.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jamesreuss.co.uk/img/robotarm.png&#34; alt=&#34;Successfully detected an orange and mug on a table&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://robotarm.jamesreuss.co.uk&#34;&gt;View the presentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jimjibone/robotarm&#34;&gt;View my code on GitHub&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Autonomous Control &amp; 3D Vision of a RC Helicopter</title>
+      <link>https://jamesreuss.co.uk/project/helicopter/</link>
+      <pubDate>Sun, 01 Jul 2012 12:21:21 +0000</pubDate>
+      
+      <guid>https://jamesreuss.co.uk/project/helicopter/</guid>
+      <description>&lt;p&gt;For my 3rd year engineering project at university, I developed a system using my Mac, an Arduino and a Kinect which could autonomously fly a small RC helicopter around a room.&lt;/p&gt;
+
+&lt;p&gt;This took a lot of work, but worked awesomly in the end! I was able to create a system that allowed the helicopter to hover at a height of 1 metre off the floor, and centre relative to the Kinect camera.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jamesreuss.co.uk/img/helicopter.png&#34; alt=&#34;Helicopter detected within the scene&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://youtu.be/mldUCNJC5_8&#34;&gt;See a testing video&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

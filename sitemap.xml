@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://jamesreuss.co.uk/</loc>
+    <lastmod>2016-01-19T22:02:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamesreuss.co.uk/post/golang-and-recover/</loc>
+    <lastmod>2016-01-19T22:02:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamesreuss.co.uk/post/remote-control-lights-raspi/</loc>
+    <lastmod>2014-10-03T21:45:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamesreuss.co.uk/post/decoding-audio-with-ffmpeg/</loc>
+    <lastmod>2013-09-15T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamesreuss.co.uk/project/robotarm/</loc>
+    <lastmod>2013-07-01T12:21:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamesreuss.co.uk/project/helicopter/</loc>
+    <lastmod>2012-07-01T12:21:21+00:00</lastmod>
+  </url>
+  
+</urlset>

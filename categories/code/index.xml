@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on James Reuss</title>
+    <link>https://jamesreuss.co.uk/categories/code/</link>
+    <description>Recent content in Code on James Reuss</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 19 Jan 2016 22:02:56 +0000</lastBuildDate>
+    <atom:link href="https://jamesreuss.co.uk/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>golang and recover</title>
+      <link>https://jamesreuss.co.uk/post/golang-and-recover/</link>
+      <pubDate>Tue, 19 Jan 2016 22:02:56 +0000</pubDate>
+      
+      <guid>https://jamesreuss.co.uk/post/golang-and-recover/</guid>
+      <description>&lt;p&gt;Go&amp;rsquo;s &lt;code&gt;panic()&lt;/code&gt; function is great, it allows you to cause the entire program to exit if there is an error, much like exceptions in another languages, except that Go will print out useful information about your current goroutines. On top of that, when panicking begins, all of your deferred functions are also called, allowing you to tidy up any resources before the program exits.&lt;/p&gt;
+
+&lt;p&gt;I used to think this was great already, but then I stumbled upon the &lt;code&gt;recover()&lt;/code&gt; function when looking through the net package&amp;rsquo;s source code. This allows you to capture and recover from a panic. Information about the panic is returned from the recover function, which you can then handle and attempt to correct the problem.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s an example of panic, defer and recover in action.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import &amp;quot;fmt&amp;quot;
+
+func main() {
+    fmt.Println(&amp;quot;Starting things...&amp;quot;)
+
+    defer func() {
+        if r := recover(); r != nil {
+            fmt.Println(&amp;quot;caught the panic:&amp;quot;, r)
+        }
+    }()
+
+    // Do something, then...
+    panic(&amp;quot;bad stuff&amp;quot;)
+
+    fmt.Println(&amp;quot;...finished things&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.golang.org/p/qR6r_K-y_8&#34;&gt;Try in the playground&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This came handy recently while attempting to unmarshal some JSON into a custom type. The json package was panicking and the error message was very unhelpful (not usual for Go in my experience). So, I did some digging and came across the &lt;code&gt;recover()&lt;/code&gt; function which helped to pinpoint the point at which the panic occurred and led me to discover it was that I was trying to assign a value to a nil map!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

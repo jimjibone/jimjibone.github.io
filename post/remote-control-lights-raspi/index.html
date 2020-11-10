@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Remote Control Lights using a Raspberry Pi &middot; James Reuss</title>
+    <meta name="description" content="I had a LightwaveRF dimmer switch, but I didn&#39;t want to have to use the remote.">
+    <meta name="author" content="James Reuss">
+    <link rel="canonical" href="https://jamesreuss.co.uk/" />
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600|Montserrat:400,700"/>
+
+    
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/atom-one-light.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+
+    
+    <meta property="og:site_name" content="James Reuss">
+    <meta property="og:title" content="James Reuss">
+    <meta property="og:url" content="https://jamesreuss.co.uk/post/remote-control-lights-raspi/">
+    <meta property="og:description" content="Wouldn&#39;t it be great to talk to your house?">
+    <meta property="og:type" content="article" />
+    <meta property="og:article:author" content="James Reuss" />
+    <meta property="og:article:published_time" content="2014-10-03T21:45:13Z" />
+
+    <meta name="generator" content="Hugo 0.16" />
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+        <div class="site-title">
+            <h1><a href="https://jamesreuss.co.uk/" alt="James Reuss">James Reuss</a></h1>
+        </div>
+	</div>
+</div>
+
+
+
+<div class="container">
+	<article class="row list-article post">
+		<header>
+            <h1><a href="https://jamesreuss.co.uk/post/remote-control-lights-raspi/">Remote Control Lights using a Raspberry Pi</a></h1>
+            <p><i class="fa fa-calendar"></i> <time datetime="2014-10-03T21:45:13Z">October 3, 2014</time></p>
+			<p><i class="fa fa-tag"></i> <a href="https://jamesreuss.co.uk/tags/lighting">lighting</a>, <a href="https://jamesreuss.co.uk/tags/raspberry-pi">raspberry pi</a></p>
+			<p><i class="fa fa-folder-open"></i> <a href="https://jamesreuss.co.uk/categories/projects">projects</a>, <a href="https://jamesreuss.co.uk/categories/home-automation">home automation</a></p>
+		</header>
+
+		<section>
+			<p>I got fed up with using my Arduino to interface with hardware. It&rsquo;s really easy to use and wire things up, but actually transferring data between it and a PC (and possibly a server of some sort) is pretty painful. It usually requires using serial communications and some data serialisation method. So I thought I&rsquo;d use a Raspberry Pi for a change!</p>
+
+<p>I already had a 433 MHz transmitter/receiver pair working with the Arduino. I was trying out both the <a href="https://github.com/lawrie/LightwaveRF">lawrie/LightwaveRF</a> and <a href="https://github.com/roberttidey/LightwaveRF">roberttidey/LightwaveRF</a> libraries to get my ceiling light and wall plug lights switching on and off remotely and it was awesome. But again, the Arduino brought pain when interfacing with a server.</p>
+
+<p>I plugged the 433 MHz transmitter into the Raspberry Pi&rsquo;s GPIO&rsquo;s, grabbed <a href="https://github.com/lawrie/LightwaveRF">lawrie&rsquo;s</a> library, converted it to be Raspberry Pi friendly using <a href="http://wiringpi.com">wiringPi</a> and created a simple C++ main function to spew out some messages every couple of seconds. This was really easy using wiringPi!</p>
+
+<p>Then I created this video.</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/UApxWZYKNRU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
+
+
+<p>The system seemed to work great! But it now needed the ability to receive messages too, for some unknown reason. So I attempted to use <a href="https://github.com/lawrie/LightwaveRF">lawrie&rsquo;s</a> library again but it really failed for reasons that I forget&hellip; So I switched to using <a href="https://github.com/roberttidey/LightwaveRF">roberttidey&rsquo;s</a> library for RX, made it Raspberry Pi friendly and it worked!</p>
+
+<p>I uploaded the code to GitHub at <a href="https://github.com/jimjibone/LightwaveRF">jimjibone/LightwaveRF</a> so feel free to clone, fork or whatever.</p>
+
+<p>I would ideally prefer to switch to use entirely <a href="https://github.com/roberttidey/LightwaveRF">roberttidey&rsquo;s</a> library, converted to use the Raspberry Pi, but initial attempts failed when trying to get TX working. I have also recently used this library with the Spark Core and it works really well, so enabling the library to work on the Pi would be awesome.</p>
+
+		</section>
+
+		<footer></footer>
+	</article>
+</div>
+
+<div class="container">
+	<div class="row">
+        <div class="site-footer">
+            <p><a href="" type="application/rss+xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a></p>
+            <p>&copy; <a href="https://jamesreuss.co.uk/">James Reuss</a> 2017 | All rights reserved</p>
+            <p>Theme by <a href="http://jamesreuss.co.uk">James Reuss</a>. Generated with <a href="http://gohugo.io/">Hugo</a>.</p>
+        </div>
+	</div>
+</div>
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+    var _gaq=[['_setAccount','UA-36805184-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src='//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+
+</body>
+</html>

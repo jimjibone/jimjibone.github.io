@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on James Reuss</title>
+    <link>https://jamesreuss.co.uk/categories/projects/</link>
+    <description>Recent content in Projects on James Reuss</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 03 Oct 2014 21:45:13 +0000</lastBuildDate>
+    <atom:link href="https://jamesreuss.co.uk/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Remote Control Lights using a Raspberry Pi</title>
+      <link>https://jamesreuss.co.uk/post/remote-control-lights-raspi/</link>
+      <pubDate>Fri, 03 Oct 2014 21:45:13 +0000</pubDate>
+      
+      <guid>https://jamesreuss.co.uk/post/remote-control-lights-raspi/</guid>
+      <description>&lt;p&gt;I got fed up with using my Arduino to interface with hardware. It&amp;rsquo;s really easy to use and wire things up, but actually transferring data between it and a PC (and possibly a server of some sort) is pretty painful. It usually requires using serial communications and some data serialisation method. So I thought I&amp;rsquo;d use a Raspberry Pi for a change!&lt;/p&gt;
+
+&lt;p&gt;I already had a 433 MHz transmitter/receiver pair working with the Arduino. I was trying out both the &lt;a href=&#34;https://github.com/lawrie/LightwaveRF&#34;&gt;lawrie/LightwaveRF&lt;/a&gt; and &lt;a href=&#34;https://github.com/roberttidey/LightwaveRF&#34;&gt;roberttidey/LightwaveRF&lt;/a&gt; libraries to get my ceiling light and wall plug lights switching on and off remotely and it was awesome. But again, the Arduino brought pain when interfacing with a server.&lt;/p&gt;
+
+&lt;p&gt;I plugged the 433 MHz transmitter into the Raspberry Pi&amp;rsquo;s GPIO&amp;rsquo;s, grabbed &lt;a href=&#34;https://github.com/lawrie/LightwaveRF&#34;&gt;lawrie&amp;rsquo;s&lt;/a&gt; library, converted it to be Raspberry Pi friendly using &lt;a href=&#34;http://wiringpi.com&#34;&gt;wiringPi&lt;/a&gt; and created a simple C++ main function to spew out some messages every couple of seconds. This was really easy using wiringPi!&lt;/p&gt;
+
+&lt;p&gt;Then I created this video.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/UApxWZYKNRU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;p&gt;The system seemed to work great! But it now needed the ability to receive messages too, for some unknown reason. So I attempted to use &lt;a href=&#34;https://github.com/lawrie/LightwaveRF&#34;&gt;lawrie&amp;rsquo;s&lt;/a&gt; library again but it really failed for reasons that I forget&amp;hellip; So I switched to using &lt;a href=&#34;https://github.com/roberttidey/LightwaveRF&#34;&gt;roberttidey&amp;rsquo;s&lt;/a&gt; library for RX, made it Raspberry Pi friendly and it worked!&lt;/p&gt;
+
+&lt;p&gt;I uploaded the code to GitHub at &lt;a href=&#34;https://github.com/jimjibone/LightwaveRF&#34;&gt;jimjibone/LightwaveRF&lt;/a&gt; so feel free to clone, fork or whatever.&lt;/p&gt;
+
+&lt;p&gt;I would ideally prefer to switch to use entirely &lt;a href=&#34;https://github.com/roberttidey/LightwaveRF&#34;&gt;roberttidey&amp;rsquo;s&lt;/a&gt; library, converted to use the Raspberry Pi, but initial attempts failed when trying to get TX working. I have also recently used this library with the Spark Core and it works really well, so enabling the library to work on the Pi would be awesome.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Decoding Audio with FFMpeg</title>
+      <link>https://jamesreuss.co.uk/post/decoding-audio-with-ffmpeg/</link>
+      <pubDate>Sun, 15 Sep 2013 12:00:00 +0000</pubDate>
+      
+      <guid>https://jamesreuss.co.uk/post/decoding-audio-with-ffmpeg/</guid>
+      <description>&lt;p&gt;For some reason there doesn&amp;rsquo;t seem to be much help on the internet on how to basically decode an audio file to raw samples using FFMpeg&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;So here&amp;rsquo;s one I made!&lt;/p&gt;
+
+&lt;p&gt;As you can guess, I  looked for a long time and ran in to many problems. One big problem seemed to be that lots of example code used depreciated functions which complicated problems :( especially the resampling functions.&lt;/p&gt;
+
+&lt;p&gt;I got it working in the end though!&lt;/p&gt;
+
+&lt;p&gt;So I don&amp;rsquo;t keep boring you, here&amp;rsquo;s how I do it:&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/jimjibone/6569303.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Object Detection for an Eye-Tracking Robotic Arm</title>
+      <link>https://jamesreuss.co.uk/project/robotarm/</link>
+      <pubDate>Mon, 01 Jul 2013 12:21:27 +0000</pubDate>
+      
+      <guid>https://jamesreuss.co.uk/project/robotarm/</guid>
+      <description>&lt;p&gt;For my 4th year engineering project at university, I worked with a group of engineers to create a semi-autonomous robotic arm system which accepted user input via an eye-tracker.&lt;/p&gt;
+
+&lt;p&gt;My task in this project was to develop the object detection system to help guide the arm around the workspace.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jamesreuss.co.uk/img/robotarm.png&#34; alt=&#34;Successfully detected an orange and mug on a table&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://robotarm.jamesreuss.co.uk&#34;&gt;View the presentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jimjibone/robotarm&#34;&gt;View my code on GitHub&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Autonomous Control &amp; 3D Vision of a RC Helicopter</title>
+      <link>https://jamesreuss.co.uk/project/helicopter/</link>
+      <pubDate>Sun, 01 Jul 2012 12:21:21 +0000</pubDate>
+      
+      <guid>https://jamesreuss.co.uk/project/helicopter/</guid>
+      <description>&lt;p&gt;For my 3rd year engineering project at university, I developed a system using my Mac, an Arduino and a Kinect which could autonomously fly a small RC helicopter around a room.&lt;/p&gt;
+
+&lt;p&gt;This took a lot of work, but worked awesomly in the end! I was able to create a system that allowed the helicopter to hover at a height of 1 metre off the floor, and centre relative to the Kinect camera.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jamesreuss.co.uk/img/helicopter.png&#34; alt=&#34;Helicopter detected within the scene&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://youtu.be/mldUCNJC5_8&#34;&gt;See a testing video&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

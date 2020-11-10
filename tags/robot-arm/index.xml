@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Robot Arm on James Reuss</title>
+    <link>https://jamesreuss.co.uk/tags/robot-arm/</link>
+    <description>Recent content in Robot Arm on James Reuss</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 01 Jul 2013 12:21:27 +0000</lastBuildDate>
+    <atom:link href="https://jamesreuss.co.uk/tags/robot-arm/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Object Detection for an Eye-Tracking Robotic Arm</title>
+      <link>https://jamesreuss.co.uk/project/robotarm/</link>
+      <pubDate>Mon, 01 Jul 2013 12:21:27 +0000</pubDate>
+      
+      <guid>https://jamesreuss.co.uk/project/robotarm/</guid>
+      <description>&lt;p&gt;For my 4th year engineering project at university, I worked with a group of engineers to create a semi-autonomous robotic arm system which accepted user input via an eye-tracker.&lt;/p&gt;
+
+&lt;p&gt;My task in this project was to develop the object detection system to help guide the arm around the workspace.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jamesreuss.co.uk/img/robotarm.png&#34; alt=&#34;Successfully detected an orange and mug on a table&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://robotarm.jamesreuss.co.uk&#34;&gt;View the presentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jimjibone/robotarm&#34;&gt;View my code on GitHub&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lighting on James Reuss</title>
+    <link>https://jamesreuss.co.uk/tags/lighting/</link>
+    <description>Recent content in Lighting on James Reuss</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 03 Oct 2014 21:45:13 +0000</lastBuildDate>
+    <atom:link href="https://jamesreuss.co.uk/tags/lighting/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Remote Control Lights using a Raspberry Pi</title>
+      <link>https://jamesreuss.co.uk/post/remote-control-lights-raspi/</link>
+      <pubDate>Fri, 03 Oct 2014 21:45:13 +0000</pubDate>
+      
+      <guid>https://jamesreuss.co.uk/post/remote-control-lights-raspi/</guid>
+      <description>&lt;p&gt;I got fed up with using my Arduino to interface with hardware. It&amp;rsquo;s really easy to use and wire things up, but actually transferring data between it and a PC (and possibly a server of some sort) is pretty painful. It usually requires using serial communications and some data serialisation method. So I thought I&amp;rsquo;d use a Raspberry Pi for a change!&lt;/p&gt;
+
+&lt;p&gt;I already had a 433 MHz transmitter/receiver pair working with the Arduino. I was trying out both the &lt;a href=&#34;https://github.com/lawrie/LightwaveRF&#34;&gt;lawrie/LightwaveRF&lt;/a&gt; and &lt;a href=&#34;https://github.com/roberttidey/LightwaveRF&#34;&gt;roberttidey/LightwaveRF&lt;/a&gt; libraries to get my ceiling light and wall plug lights switching on and off remotely and it was awesome. But again, the Arduino brought pain when interfacing with a server.&lt;/p&gt;
+
+&lt;p&gt;I plugged the 433 MHz transmitter into the Raspberry Pi&amp;rsquo;s GPIO&amp;rsquo;s, grabbed &lt;a href=&#34;https://github.com/lawrie/LightwaveRF&#34;&gt;lawrie&amp;rsquo;s&lt;/a&gt; library, converted it to be Raspberry Pi friendly using &lt;a href=&#34;http://wiringpi.com&#34;&gt;wiringPi&lt;/a&gt; and created a simple C++ main function to spew out some messages every couple of seconds. This was really easy using wiringPi!&lt;/p&gt;
+
+&lt;p&gt;Then I created this video.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/UApxWZYKNRU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;p&gt;The system seemed to work great! But it now needed the ability to receive messages too, for some unknown reason. So I attempted to use &lt;a href=&#34;https://github.com/lawrie/LightwaveRF&#34;&gt;lawrie&amp;rsquo;s&lt;/a&gt; library again but it really failed for reasons that I forget&amp;hellip; So I switched to using &lt;a href=&#34;https://github.com/roberttidey/LightwaveRF&#34;&gt;roberttidey&amp;rsquo;s&lt;/a&gt; library for RX, made it Raspberry Pi friendly and it worked!&lt;/p&gt;
+
+&lt;p&gt;I uploaded the code to GitHub at &lt;a href=&#34;https://github.com/jimjibone/LightwaveRF&#34;&gt;jimjibone/LightwaveRF&lt;/a&gt; so feel free to clone, fork or whatever.&lt;/p&gt;
+
+&lt;p&gt;I would ideally prefer to switch to use entirely &lt;a href=&#34;https://github.com/roberttidey/LightwaveRF&#34;&gt;roberttidey&amp;rsquo;s&lt;/a&gt; library, converted to use the Raspberry Pi, but initial attempts failed when trying to get TX working. I have also recently used this library with the Spark Core and it works really well, so enabling the library to work on the Pi would be awesome.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

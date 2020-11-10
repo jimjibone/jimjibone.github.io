@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ffmpeg on James Reuss</title>
+    <link>https://jamesreuss.co.uk/tags/ffmpeg/</link>
+    <description>Recent content in Ffmpeg on James Reuss</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 15 Sep 2013 12:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jamesreuss.co.uk/tags/ffmpeg/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Decoding Audio with FFMpeg</title>
+      <link>https://jamesreuss.co.uk/post/decoding-audio-with-ffmpeg/</link>
+      <pubDate>Sun, 15 Sep 2013 12:00:00 +0000</pubDate>
+      
+      <guid>https://jamesreuss.co.uk/post/decoding-audio-with-ffmpeg/</guid>
+      <description>&lt;p&gt;For some reason there doesn&amp;rsquo;t seem to be much help on the internet on how to basically decode an audio file to raw samples using FFMpeg&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;So here&amp;rsquo;s one I made!&lt;/p&gt;
+
+&lt;p&gt;As you can guess, I  looked for a long time and ran in to many problems. One big problem seemed to be that lots of example code used depreciated functions which complicated problems :( especially the resampling functions.&lt;/p&gt;
+
+&lt;p&gt;I got it working in the end though!&lt;/p&gt;
+
+&lt;p&gt;So I don&amp;rsquo;t keep boring you, here&amp;rsquo;s how I do it:&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/jimjibone/6569303.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
